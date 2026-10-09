@@ -1,3 +1,0 @@
-C:\Users\Administrator\AppData\Roaming\MobaXterm\home\mor26-sheet0
-
-这是我这次作业项目的目录，用 MobaXterm 创建的，在 VScode 中同样可以打开同时编辑。我用了 ipynb 写
