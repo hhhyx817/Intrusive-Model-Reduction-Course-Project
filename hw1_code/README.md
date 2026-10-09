@@ -102,22 +102,24 @@ where $q = F$ because the same boundary functional defines the load vector.
 ---
 
 ## Repository Structure
+
+```text
 .
-├── README.md 
-├── report.pdf 
-├── src/
-│ ├── model.py # mesh, connectivity, element-to-block map
-│ ├── operators.py # matrix-free A(μ)v, A_q v, Mv
-│ ├── solve.py # JIT-compiled CG solve and QoI
-│ ├── snapshots.py # snapshot generation
-│ ├── pod.py # Euclidean POD and Galerkin ROM
-│ ├── timings.py # runtime and speedup measurements
-│ └── uq.py # Monte Carlo, control variates
-├── scripts/
-│ ├── run_ex1_1.py # FOM validation
-│ ├── run_ex1_2.py # snapshot spectra
-│ ├── run_ex1_3.py # POD / ROM errors and timings
-│ └── run_ex1_4.py # UQ and multi-fidelity
-├── data/ # raw numerical data for figures
-├── figures/ # generated plots
-└── environment.yml # JAX + dependencies
+├── README.md                  # 本说明文件
+├── report.pdf                 # 最终的 PDF 报告
+├── environment.yml            # JAX 及依赖环境
+├── src/                       # 核心源代码
+│   ├── model.py               # 网格、连接关系、单元到块（element-to-block）的映射
+│   ├── operators.py           # 无矩阵（matrix-free）算子 A(μ)v, A_q v, Mv
+│   ├── solve.py               # JIT 编译的 CG 求解器与 QoI 计算
+│   ├── snapshots.py           # 快照生成
+│   ├── pod.py                 # 欧几里得 POD 与 Galerkin ROM
+│   ├── timings.py             # 运行时间与加速比测量
+│   └── uq.py                  # 蒙特卡洛与控制变量（control variates）
+├── scripts/                   # 可执行脚本
+│   ├── run_ex1_1.py           # 练习 1.1：FOM 验证
+│   ├── run_ex1_2.py           # 练习 1.2：快照谱
+│   ├── run_ex1_3.py           # 练习 1.3：POD / ROM 误差与运行时间
+│   └── run_ex1_4.py           # 练习 1.4：UQ 与多保真度
+├── data/                      # 用于生成图表的原始数值数据
+└── figures/                   # 生成的图表
